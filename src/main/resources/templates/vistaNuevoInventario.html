@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<title>Inventario</title>
+</head>
+
+<body>
+	<form th:action="@{/inventarios/insertar}" th:object="${inventarioTmp}" th:method="POST">
+		<table class="table table-success table-striped">
+			<tr>
+				<td>
+					<label class="form-label">Número de Bodega:</label>
+				</td>
+				<td>
+					<input class="form-control" type="text" id="nombre" th:field="${inventarioTmp.numeroBodega}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label class="form-label">Código Barras Maestro:</label>
+				</td>
+				<td>
+					<input class="form-control" type="text" id="apellido"
+						th:field="${inventarioTmp.codigoBarrasMaestro}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label class="form-label">Cantidad:</label>
+				</td>
+				<td>
+					<input class="form-control" type="text" id="cedula" th:field="${inventarioTmp.cantidad}">
+				</td>
+			</tr>
+		</table>
+		<button class="btn btn-primary" type="submit">Guardar</button>
+	</form>
+</body>
+
+</html>
