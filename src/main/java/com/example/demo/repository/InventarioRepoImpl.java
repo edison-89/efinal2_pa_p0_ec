@@ -20,10 +20,4 @@ public class InventarioRepoImpl implements IInventarioRepo {
 		this.entityManager.persist(inventario);
 	}
 
-	@Override
-	public void actualizar(Inventario inventario) {
-		// TODO Auto-generated method stub
-		this.entityManager.merge(inventario);
-	}
-
 }
